@@ -11,49 +11,52 @@ redirect_from:
 
 Education
 ======
-* B.S. in Testing Science, Testing University, 2012
-* M.S. in Testonomy, Testing University, 2014
-* Ph.D in Testology, Testing University, 2017 (expected)
+* B.S. in Computer(Software) Engineering, Urmia University, 2014
+* M.S. in Computer(Software) Engineering, Amirkabir university of technology (Tehran Polytechnic), 2017
+* Ph.D in Big Data Management, TU Berlin University, 2021 (expected)
 
 Work experience
 ======
-* Summer 2015: Research Assistant
-  * Testing University
-  * Duties included: Running Tests
-  * Supervisor: Professor Travis
+* DESIGNING AN UNSUPERVISED, PARALLEL AND GRAPH-BASED FRAUD DETECTION METHOD USING APACHE SPARK.
+  * Got score 19.75 / 20 in M.Sc. thesis defense.
+  * A paper is in process for publishing.
 
-* Fall 2015: Research Assistant
-  * Testing University
-  * Duties included: Running Tests
-  * Supervisor: Professor Travis
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* DESIGNING A DRIVER ASSISTANT SYSTEM BASED ON VEHICULAR COMMUNICATION USING FUZZY LOGIC.
+  * Got score 19 / 20 in B.Sc. thesis
+  * A paper published in Quarterly Journal of Transportation Engineering
+  * proposed driver assistant system decreases the number of potential accidents by at least 60% .
 
-Publications
+* DESIGNING AND IMPLEMENTING SCALABLE FORUM MANAGEMENT SYSTEM
+  * This project was supported by Radcom company (pioneer company in web-based systems)
+  * Scalability of the application caused it to be used widely all over country such as Ministry of I.C.T of Iran
+
+* DESIGNING AND IMPLEMENTING SCALABLE WEBLIOG MANAGEMENT SYSTEM
+  * This project was supported by Radcom company
+  * This project is being used widely by many companies
+
+* DESIGNING AND IMPLEMENTING SCALABLE WORKFLOW (BPMS) SYSTEM
+
+* DESIGNING AND IMPLEMENTING ACADEMIC EXAMS SYSTEM
+  * This project is supported by Radcom company
+  * It is using by many leading companies in Iran
+
+Academy Honors and Awards
 ======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
+* RANKED #4 IN 19TH NATIONAL COMPUTER OLYMPIAD OF IRAN
+  * September 2014
+* RANKED #10 IN 18TH NATIONAL COMPUTER OLYMPIAD OF IRAN
+  * August 2013
+* RANKED #1 BASED ON GPA, B.SC. AT URMIA UNIVERSITY
+  * 2014
+* ACCEPTED FOR M.SC. AS A TALENTED STUDENT WITHOUT ENTRANCE EXAM, CEIT
+  * DEPARTMENT OF AMIRKABIR UNIVERISTY OF TECHNOLOGY (TEHRAN POLYTECHNIC) 2015
+* RANKED #1 IN 19TH NATIONAL COMPUTER OLYMPIAD OF IRAN SEMIFINAL (REGIONAL)
+  * June 2014
+* RANKED #2 IN 18TH NATIONAL COMPUTER OLYMPIAD OF IRAN SEMIFINAL (REGIONAL)
+  * June 2013
   
 Teaching
 ======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+* Teaching assistant of Dr. Amir H. Payberah (Researcher at Oxford university, United Kingdom)
+  * Course: Data Intensive Computing
   
-Service and leadership
-======
-* Currently signed in to 49 different slack teams
