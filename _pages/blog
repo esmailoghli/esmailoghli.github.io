@@ -1,0 +1,14 @@
+---
+layout: archive
+permalink: /blog/
+author_profile: true
+---
+
+{% include base_path %}
+
+<h1>Blog</h1>
+<ul>
+<li>item1</li>
+<li>item2</li>
+<li>item3</li>
+</ul>
