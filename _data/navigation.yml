@@ -12,8 +12,5 @@ main:
   - title: "Photography"
     url: /portfolio/
 
-  - title: "Blog"
-    url: /blog/
-
   - title: "Blog Posts"
     url: /year-archive/
