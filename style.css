@@ -7,27 +7,31 @@
    ============================================================= */
 
 :root {
-  --bg:       #ffffff;   /* page background            */
-  --text:     #1b1b1b;   /* main text                  */
-  --muted:    #5c636b;   /* secondary text: authors, dates, venues */
-  --accent:   #15508a;   /* links                      */
-  --accent-2: #0e3a66;   /* link hover                 */
-  --rule:     #e6e8eb;   /* hairlines under headings   */
+  --bg:          #ffffff;   /* page background            */
+  --text:        #1b1b1b;   /* main text                  */
+  --muted:       #5c636b;   /* secondary text: authors, dates, venues */
+  --accent:      #1a5fb4;   /* links                      */
+  --accent-2:    #134a8e;   /* link hover                 */
+  --accent-tint: #eaf1fb;   /* background of resource tags */
+  --accent-fg:   #ffffff;   /* text on a filled accent background */
+  --rule:        #e6e8eb;   /* hairlines under headings   */
 
-  --maxw:     46rem;     /* content column width       */
-  --font:     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --maxw:        46rem;     /* content column width       */
+  --font:        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* Honors the reader's system dark mode automatically.
    Don't want a dark version? Delete this whole block. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:       #14171a;
-    --text:     #e6e7e9;
-    --muted:    #9aa1a9;
-    --accent:   #7fb0ef;
-    --accent-2: #a7c8f5;
-    --rule:     #2a2f36;
+    --bg:          #14171a;
+    --text:        #e6e7e9;
+    --muted:       #9aa1a9;
+    --accent:      #7fb0ef;
+    --accent-2:    #a7c8f5;
+    --accent-tint: #1e2a38;
+    --accent-fg:   #14171a;
+    --rule:        #2a2f36;
   }
 }
 
@@ -107,12 +111,12 @@ p { margin: 0 0 0.95rem; }
 /* optional profile photo (see commented markup in index.html) */
 .photo {
   float: right;
-  width: 140px;
-  height: 140px;
+  width: 134px;
+  height: 162px;
   object-fit: cover;
-  object-position: center 20%;   /* bias the crop toward the face */
+  object-position: center 22%;   /* bias the crop toward the face */
   border-radius: 8px;
-  margin: 0.2rem 0 1rem 1.5rem;
+  margin: 0.3rem 0 1rem 1.5rem;
 }
 
 /* ---------------- news ---------------- */
@@ -127,11 +131,27 @@ ul.news .date {
 
 /* ---------------- publications ---------------- */
 ul.pubs { list-style: none; padding: 0; margin: 0; }
-.pub { margin: 0 0 1.15rem; }
-.pub-title { font-weight: 550; }
+.pub { margin: 0 0 1.3rem; }
+.pub-title { font-weight: 700; color: var(--text); }
 .pub-authors { color: var(--muted); font-size: 0.95rem; }
 .pub-venue { color: var(--muted); font-size: 0.86rem; margin-top: 0.05rem; }
 .pub-venue .note { font-style: italic; }
+
+/* resource links under a paper: PDF / Slides / Video / Code / arXiv … */
+.pub-links { margin-top: 0.45rem; }
+.pub-links a {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-tint);
+  border-radius: 5px;
+  padding: 0.1rem 0.5rem;
+  margin: 0 0.3rem 0.3rem 0;
+  text-decoration: none;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+.pub-links a:hover { background: var(--accent); color: var(--accent-fg); text-decoration: none; }
 
 /* ---------------- plain lists (talks, teaching, awards, service) ---------------- */
 ul.list { list-style: none; padding: 0; margin: 0; }

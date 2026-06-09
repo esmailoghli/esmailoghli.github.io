@@ -23,8 +23,9 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 ## How to edit
 
 - **Add a publication** — in `index.html`, copy one `<li class="pub">…</li>` block,
-  paste it at the top of the list, edit the title/authors/venue. Wrap your own name in
-  `<strong>…</strong>`.
+  paste it at the top of the list, edit the title/authors/venue, and bold your own name
+  with `<strong>…</strong>`. Resource links (PDF, Slides, Video, Code, arXiv) live in the
+  `<div class="pub-links">` row — copy an `<a>` and change its label and URL.
 - **Add a news item** — copy one `<li>` in the News list, change the date and text.
 - **Change colors or width** — edit the variables at the top of `style.css`
   (`--accent`, `--text`, `--maxw`, …). There's a dark-mode block right below; delete it
