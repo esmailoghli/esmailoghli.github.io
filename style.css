@@ -111,10 +111,9 @@ p { margin: 0 0 0.95rem; }
 /* optional profile photo (see commented markup in index.html) */
 .photo {
   float: right;
-  width: 134px;
-  height: 162px;
-  object-fit: cover;
-  object-position: center 22%;   /* bias the crop toward the face */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;          /* square photo shows whole, no cropping */
   border-radius: 8px;
   margin: 0.3rem 0 1rem 1.5rem;
 }
