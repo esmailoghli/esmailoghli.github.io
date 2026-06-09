@@ -1,0 +1,160 @@
+/* =============================================================
+   Mahdi Esmailoghli — personal website
+   Plain HTML + CSS. No build step, no JavaScript, no frameworks.
+
+   Almost everything you'd want to tweak is in the variables just
+   below: change a color or the content width in ONE place here.
+   ============================================================= */
+
+:root {
+  --bg:       #ffffff;   /* page background            */
+  --text:     #1b1b1b;   /* main text                  */
+  --muted:    #5c636b;   /* secondary text: authors, dates, venues */
+  --accent:   #15508a;   /* links                      */
+  --accent-2: #0e3a66;   /* link hover                 */
+  --rule:     #e6e8eb;   /* hairlines under headings   */
+
+  --maxw:     46rem;     /* content column width       */
+  --font:     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Honors the reader's system dark mode automatically.
+   Don't want a dark version? Delete this whole block. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:       #14171a;
+    --text:     #e6e7e9;
+    --muted:    #9aa1a9;
+    --accent:   #7fb0ef;
+    --accent-2: #a7c8f5;
+    --rule:     #2a2f36;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-2); text-decoration: underline; }
+
+strong { font-weight: 650; }
+
+/* ---------------- top navigation (sticky) ---------------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+}
+.topbar-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.brand { color: var(--text); font-weight: 600; }
+.topbar nav a { color: var(--muted); margin-left: 1.15rem; font-size: 0.92rem; }
+.topbar nav a:hover { color: var(--accent); text-decoration: none; }
+
+/* ---------------- layout ---------------- */
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+section { margin: 2.5rem 0; }
+section:first-child { margin-top: 0.5rem; }
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.3rem;
+}
+h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--rule);
+}
+p { margin: 0 0 0.95rem; }
+
+/* ---------------- intro ---------------- */
+.intro .role { color: var(--muted); margin: 0 0 0.7rem; }
+.intro .links { margin: 0; }
+.interests { color: var(--muted); font-size: 0.95rem; }
+
+/* optional profile photo (see commented markup in index.html) */
+.photo {
+  float: right;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center 20%;   /* bias the crop toward the face */
+  border-radius: 8px;
+  margin: 0.2rem 0 1rem 1.5rem;
+}
+
+/* ---------------- news ---------------- */
+ul.news { list-style: none; padding: 0; margin: 0; }
+ul.news li { display: flex; gap: 1rem; margin-bottom: 0.6rem; }
+ul.news .date {
+  flex: 0 0 5.5rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------- publications ---------------- */
+ul.pubs { list-style: none; padding: 0; margin: 0; }
+.pub { margin: 0 0 1.15rem; }
+.pub-title { font-weight: 550; }
+.pub-authors { color: var(--muted); font-size: 0.95rem; }
+.pub-venue { color: var(--muted); font-size: 0.86rem; margin-top: 0.05rem; }
+.pub-venue .note { font-style: italic; }
+
+/* ---------------- plain lists (talks, teaching, awards, service) ---------------- */
+ul.list { list-style: none; padding: 0; margin: 0; }
+ul.list li { margin: 0 0 0.75rem; }
+ul.list .sub { display: block; color: var(--muted); font-size: 0.92rem; }
+.label { color: var(--muted); font-weight: 600; }
+.note-block { color: var(--muted); font-size: 0.95rem; margin-top: 1rem; }
+
+/* ---------------- footer ---------------- */
+footer {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ---------------- small screens ---------------- */
+@media (max-width: 540px) {
+  body { font-size: 16px; }
+  .topbar-inner { flex-direction: column; align-items: flex-start; gap: 0.35rem; }
+  .topbar nav a { margin: 0 1rem 0 0; }
+  ul.news li { flex-direction: column; gap: 0.1rem; }
+  .photo { float: none; display: block; margin: 0 0 1rem; }
+}
