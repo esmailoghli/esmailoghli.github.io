@@ -129,18 +129,8 @@ ul.news .date {
 }
 
 /* ---------------- publications ---------------- */
-.pub-group { margin: 0 0 1.8rem; }
-.pub-group h3 {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--muted);
-  font-weight: 700;
-  margin: 0 0 0.9rem;
-}
 ul.pubs { list-style: none; padding: 0; margin: 0; }
 .pub { margin: 0 0 1.3rem; }
-.pub-group ul.pubs .pub:last-child { margin-bottom: 0; }
 .pub-title { font-weight: 700; color: var(--text); }
 .pub-authors { color: var(--muted); font-size: 0.95rem; }
 .pub-venue { color: var(--muted); font-size: 0.86rem; margin-top: 0.05rem; }
